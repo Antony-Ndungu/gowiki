@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <titl>Wiki</titl>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <header class="w3-container w3-teal w3-top">
+        <h1 class="w3-center">Editing {{.Title}}</h1>
+    </header>
+    <div class="w3-row" style="margin-top:60px">
+            <div class="w3-col m3"><p></p></div>
+            <div class="w3-col m6 w3-center">
+                <form class="w3-container" action="/save/{{.Title}}" method="POST">
+                   <div>
+                        <textarea rows="20" cols="70" name="body">{{printf "%s" .Body}}</textarea>
+                   </div> 
+                    <button class="w3-teal w3-button">Save</button>
+                </form>
+            </div>
+            <div class="w3-col m3"><p></p></div>
+          </div> 
+    <footer class="w3-container w3-bottom w3-teal">
+        <p class="w3-center">&copy; Rights reserved.</p>
+    </footer>
+</body>
+
+</html>
